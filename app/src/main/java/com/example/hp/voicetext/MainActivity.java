@@ -66,6 +66,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         bt_chang.setOnClickListener(this);
     }
 
+    private void hh(){
+        tv_textView.setText("测试");
+    }
 
     private void startAuto(String data){
         tts.speak(data,TextToSpeech.QUEUE_FLUSH,null,"yin_text");
