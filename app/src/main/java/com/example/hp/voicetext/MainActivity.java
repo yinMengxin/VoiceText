@@ -14,7 +14,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private final String TAG  = "yin_voiceText";
 
     private TextToSpeech  tts = null ;
-    private Button bt_textVoice;
+    private Button bt_textVoice,bt_chang;
     private TextView tv_textView;
 
 
@@ -57,13 +57,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         });
     }
     private void initView(){
-        bt_textVoice =  findViewById(R.id.bt_main_textVoice);
-        tv_textView = (TextView) findViewById(R.id.tv_main_textView);
 
-        tv_textView.setText("hello world i love u");
+        bt_textVoice =  findViewById(R.id.bt_main_textVoice);
+        bt_chang = findViewById(R.id.bt_main_change);
+        tv_textView = findViewById(R.id.tv_main_textView);
 
         bt_textVoice.setOnClickListener(this);
-
+        bt_chang.setOnClickListener(this);
     }
 
 
@@ -76,6 +76,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         switch (v.getId()){
             case R.id.bt_main_textVoice:
                 startAuto(tv_textView.getText().toString());
+                break;
+            case R.id.bt_main_change:
+                tv_textView.setText("hello world i love u");
+                startAuto("hello world i love u");
                 break;
         }
     }
