@@ -10,11 +10,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="测试"/>
-    <Button
-        android:id="@+id/bt_main_change"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="改变"/>
     <TextView
         android:id="@+id/tv_main_textView"
         android:layout_width="wrap_content"
@@ -22,6 +17,5 @@
         android:text="this is the change"
         android:textStyle="bold"
         android:textColor="@color/colorPrimary"/>
-
 
 </LinearLayout>
