@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import java.util.Locale;
 
@@ -14,6 +15,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private TextToSpeech  tts = null ;
     private Button bt_textVoice;
+    private TextView tv_textView;
 
 
     @Override
@@ -55,9 +57,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         });
     }
     private void initView(){
-        bt_textVoice = (Button) findViewById(R.id.bt_main_textVoice);
+        bt_textVoice =  findViewById(R.id.bt_main_textVoice);
+        tv_textView = findViewById(R.id.tv_main_textView);
 
         bt_textVoice.setOnClickListener(this);
+
     }
 
 
@@ -69,7 +73,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.bt_main_textVoice:
-                startAuto("hello world i like you");
+                startAuto(tv_textView.getText().toString());
                 break;
         }
     }
