@@ -58,7 +58,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
     private void initView(){
         bt_textVoice =  findViewById(R.id.bt_main_textVoice);
-        tv_textView = findViewById(R.id.tv_main_textView);
+        tv_textView = (TextView) findViewById(R.id.tv_main_textView);
+
+        tv_textView.setText("hello world i love u");
 
         bt_textVoice.setOnClickListener(this);
 
